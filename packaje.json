@@ -1,0 +1,40 @@
+{
+  "name": "@asalomeri/core-utils",
+  "version": "1.0.0",
+  "description": "Reusable core utilities for JavaScript/TypeScript projects.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asalomeri/core-utils.git"
+  },
+  "homepage": "https://github.com/asalomeri/core-utils#readme",
+  "bugs": {
+    "url": "https://github.com/asalomeri/core-utils/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
